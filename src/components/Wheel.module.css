@@ -1,0 +1,21 @@
+.circleOutside {
+  width: 540px;
+  height: 540px;
+  border: solid 2px #1F1172;
+  border-radius: 100%;
+  padding: 18px;
+  background: #22299B;
+  margin: 20px;
+
+  /* test */
+  display: inline-block;
+}
+
+.circleInside {
+  width: 100%;
+  height: 100%;
+  border: solid 2px #1F1172;
+  border-radius: 100%;
+  background: white;
+  position: relative;
+}
