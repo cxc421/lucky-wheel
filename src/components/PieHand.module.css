@@ -1,0 +1,42 @@
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  height: 290px;
+  /* background: lightgrey; */
+  z-index: 100;
+  transition: transform 5s cubic-bezier(.5, .1, .15, 1);
+}
+
+.handImg {
+  position: relative;
+  z-index: 102;
+}
+
+.button,
+.buttonMask {
+  position: absolute;
+  width: 103px;
+  height: 103px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1F1172;
+  border-radius: 100%;
+  top: 94px;
+  z-index: 101;
+  text-transform: uppercase;
+  color: #FF00BA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+}
+
+.buttonMask {
+  /* background: yellow; */
+  /* opacity: 0.1; */
+  background: transparent;
+  z-index: 104;
+  cursor: pointer;
+}
