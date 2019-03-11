@@ -1,44 +1,45 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './Wheel.module.css';
 import Pie from './Pie';
 import WheelHand from './WheelHand';
 
-const Wheel = () => {
-  const datas = [
-    {
-      text: 'Movie',
-      mdIconName: 'MdMovieFilter'
-    },
-    {
-      text: 'Wish',
-      mdIconName: 'MdCake'
-    },
-    {
-      text: 'Anything',
-      mdIconName: 'MdStars'
-    },
-    {
-      text: 'Child',
-      mdIconName: 'MdChildCare'
-    },
-    {
-      text: 'Flight',
-      mdIconName: 'MdFlight'
-    },
-    {
-      text: 'Wifi',
-      mdIconName: 'MdWifi'
+const Wheel = ({ prizes, onPressStart, onPressEnd }) => {
+  const degree = 360 / prizes.length;
+
+  function getColors(idx) {
+    if (idx === prizes.length - 1 && prizes.length % 2 === 1) {
+      return {
+        bgColor: '#5858B9',
+        textColor: '#fff'
+      };
     }
-  ];
-  const degree = 360 / datas.length;
+
+    if (idx % 2 === 0) {
+      return {
+        bgColor: '#F0BEFF',
+        textColor: '#343BAA'
+      };
+    } else {
+      return {
+        bgColor: '#343BAA',
+        textColor: '#F0BEFF'
+      };
+    }
+  }
+
+  function onRotateEnd() {
+    onPressEnd();
+  }
 
   return (
     <div className={styles.circleOutside}>
       <div className={styles.circleInside}>
-        <WheelHand />
-        {datas.map(({ text, mdIconName }, idx) => {
-          const bgColor = idx % 2 === 0 ? '#F0BEFF' : '#343BAA';
-          const textColor = idx % 2 === 1 ? '#F0BEFF' : '#343BAA';
+        <WheelHand onRotateStart={onPressStart} onRotateEnd={onRotateEnd} />
+        {prizes.map(({ text, mdIconName }, idx) => {
+          // const bgColor = idx % 2 === 0 ? '#F0BEFF' : '#343BAA';
+          // const textColor = idx % 2 === 1 ? '#F0BEFF' : '#343BAA';
+          const { bgColor, textColor } = getColors(idx);
           const startDeg = idx * degree - degree / 2;
           const endDeg = startDeg + degree;
           return (
@@ -56,6 +57,12 @@ const Wheel = () => {
       </div>
     </div>
   );
+};
+
+Wheel.propTypes = {
+  prizes: PropTypes.array.isRequired,
+  onPressStart: PropTypes.func.isRequired,
+  onPressEnd: PropTypes.func.isRequired
 };
 
 export default Wheel;

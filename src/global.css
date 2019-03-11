@@ -16,3 +16,9 @@ html,
     sans-serif;
   font-weight: bold;
 }
+
+p,
+h1,
+h2 {
+  margin: 0;
+}
