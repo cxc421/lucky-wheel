@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Wheel.module.css';
 import Pie from './Pie';
-import PieHand from './PieHand';
+import WheelHand from './WheelHand';
 
 const Wheel = () => {
   const datas = [
@@ -35,7 +35,7 @@ const Wheel = () => {
   return (
     <div className={styles.circleOutside}>
       <div className={styles.circleInside}>
-        <PieHand />
+        <WheelHand />
         {datas.map(({ text, mdIconName }, idx) => {
           const bgColor = idx % 2 === 0 ? '#F0BEFF' : '#343BAA';
           const textColor = idx % 2 === 1 ? '#F0BEFF' : '#343BAA';

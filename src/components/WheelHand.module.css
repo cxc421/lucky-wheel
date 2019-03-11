@@ -4,7 +4,6 @@
   left: 50%;
   transform: translate(-50%, -50%) rotate(0deg);
   height: 290px;
-  /* background: lightgrey; */
   z-index: 100;
   transition: transform 5s cubic-bezier(.5, .1, .15, 1);
 }

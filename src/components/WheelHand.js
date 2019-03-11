@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import handSvg from '../assets/hand.svg';
-import styles from './PieHand.module.css';
+import styles from './WheelHand.module.css';
 
-const PieHand = () => {
+const WheelHand = ({ onRotateStart, onRotateEnd }) => {
   const [buttonStyle, setButtonStyle] = useState({});
   const [degree, setDegree] = useState(0);
+  const [rotating, setRotating] = useState(false);
   const handStyle = {
     transform: `translate(-50%, -50%) rotate(${degree}deg)`
   };
@@ -20,11 +22,24 @@ const PieHand = () => {
   }
 
   function rotate() {
-    setDegree(degree + Math.round(Math.random() * 360) + 1440);
+    if (!rotating) {
+      setDegree(degree + Math.round(Math.random() * 360) + 1440);
+      setRotating(true);
+      onRotateStart();
+    }
+  }
+
+  function onTranstionEnd() {
+    setRotating(false);
+    onRotateEnd(degree % 360);
   }
 
   return (
-    <div className={styles.wrapper} style={handStyle}>
+    <div
+      className={styles.wrapper}
+      style={handStyle}
+      onTransitionEnd={onTranstionEnd}
+    >
       <img className={styles.handImg} src={handSvg} alt="hand-svg" />
       <div className={styles.button} style={buttonStyle}>
         press
@@ -39,4 +54,14 @@ const PieHand = () => {
   );
 };
 
-export default PieHand;
+WheelHand.propTypes = {
+  onRotateStart: PropTypes.func,
+  onRotateEnd: PropTypes.func
+};
+
+WheelHand.defaultProps = {
+  onRotateStart: f => f,
+  onRotateEnd: f => f
+};
+
+export default WheelHand;
