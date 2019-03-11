@@ -4,15 +4,14 @@
 import React from 'react';
 
 import './global.css';
-// import WheelSvg from './components/WheelSvg';
+import styles from './App.module.css';
 import Wheel from './components/Wheel';
 
 const App = () => {
   return (
-    <>
-      {/* <WheelSvg /> */}
+    <div className={styles.app}>
       <Wheel />
-    </>
+    </div>
   );
 };
 
