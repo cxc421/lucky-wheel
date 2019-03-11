@@ -29,6 +29,11 @@
   font-size: 32px;
 }
 
+.text span {
+  margin-left: 0px;
+  font-size: 26px;
+}
+
 .starBlock {
   position: absolute;
   z-index: 3;

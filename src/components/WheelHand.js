@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import handSvg from '../assets/hand.svg';
 import styles from './WheelHand.module.css';
 
-const WheelHand = ({ onRotateStart, onRotateEnd }) => {
+const WheelHand = ({ onRotateStart, onRotateEnd, disabled }) => {
   const [buttonStyle, setButtonStyle] = useState({});
   const [degree, setDegree] = useState(0);
   const [rotating, setRotating] = useState(false);
@@ -22,6 +22,10 @@ const WheelHand = ({ onRotateStart, onRotateEnd }) => {
   }
 
   function rotate() {
+    if (disabled) {
+      onRotateEnd(degree % 360);
+      return;
+    }
     if (!rotating) {
       setDegree(degree + Math.round(Math.random() * 360) + 1440);
       setRotating(true);
@@ -56,12 +60,14 @@ const WheelHand = ({ onRotateStart, onRotateEnd }) => {
 
 WheelHand.propTypes = {
   onRotateStart: PropTypes.func,
-  onRotateEnd: PropTypes.func
+  onRotateEnd: PropTypes.func,
+  disabled: PropTypes.bool
 };
 
 WheelHand.defaultProps = {
   onRotateStart: f => f,
-  onRotateEnd: f => f
+  onRotateEnd: f => f,
+  disabled: false
 };
 
 export default WheelHand;
