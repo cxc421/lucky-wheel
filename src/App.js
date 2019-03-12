@@ -9,46 +9,16 @@ import './global.css';
 import styles from './App.module.css';
 import WheelPage from './pages/WheelPage';
 import SetupPage from './pages/SetupPage';
-
-const config20 = [
-  {
-    text: 'Movie',
-    mdIconName: 'MdMovieFilter',
-    total: 5
-  },
-  {
-    text: 'Wish',
-    mdIconName: 'MdCake',
-    total: 5
-  },
-  {
-    text: 'Anything',
-    mdIconName: 'MdStars',
-    total: 5
-  },
-  {
-    text: 'Child',
-    mdIconName: 'MdChildCare',
-    total: 4
-  },
-  {
-    text: 'Flight',
-    mdIconName: 'MdFlight',
-    total: 1
-  },
-  {
-    text: 'Wifi',
-    mdIconName: 'MdWifi',
-    total: 2
-  }
-];
+import defaultConfig from './configs/default_config_5.json';
 
 const MODE_WHEEL = 'mode-wheel';
 const MODE_SETTING = 'mode-setting';
 
 const App = () => {
-  const [prizes, setPrizes] = useState([...config20]);
+  const [prizes, setPrizes] = useState([...defaultConfig.prizes]);
   const [mode, setMode] = useState(MODE_SETTING);
+  const [displayText, setDisplayText] = useState(defaultConfig.displayText);
+  const [iconSize, setIconSize] = useState(defaultConfig.iconSize);
 
   return (
     <div className={styles.app}>
@@ -79,9 +49,21 @@ const App = () => {
       </Dropdown>
 
       {mode === MODE_WHEEL ? (
-        <WheelPage prizes={prizes} setPrizes={setPrizes} />
+        <WheelPage
+          prizes={prizes}
+          setPrizes={setPrizes}
+          displayText={displayText}
+          iconSize={iconSize}
+        />
       ) : (
-        <SetupPage />
+        <SetupPage
+          prizes={prizes}
+          setPrizes={setPrizes}
+          displayText={displayText}
+          setDisplayText={setDisplayText}
+          iconSize={iconSize}
+          setIconSize={setIconSize}
+        />
       )}
     </div>
   );

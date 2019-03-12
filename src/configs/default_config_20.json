@@ -1,0 +1,126 @@
+{
+  "prizes": [
+    {
+      "text": "Prize#1",
+      "mdIconName": "MdCardGiftcard",
+      "total": 1,
+      "id": 1
+    },
+    {
+      "text": "Prize#2",
+      "mdIconName": "MdCardGiftcard",
+      "total": 1,
+      "id": 2
+    },
+    {
+      "text": "Prize#3",
+      "mdIconName": "MdCardGiftcard",
+      "total": 1,
+      "id": 3
+    },
+    {
+      "text": "Prize#4",
+      "mdIconName": "MdCardGiftcard",
+      "total": 1,
+      "id": 4
+    },
+    {
+      "text": "Prize#5",
+      "mdIconName": "MdCardGiftcard",
+      "total": 1,
+      "id": 5
+    },
+    {
+      "text": "Prize#6",
+      "mdIconName": "MdCardGiftcard",
+      "total": 1,
+      "id": 6
+    },
+    {
+      "text": "Prize#7",
+      "mdIconName": "MdCardGiftcard",
+      "total": 1,
+      "id": 7
+    },
+    {
+      "text": "Prize#8",
+      "mdIconName": "MdCardGiftcard",
+      "total": 1,
+      "id": 8
+    },
+    {
+      "text": "Prize#9",
+      "mdIconName": "MdCardGiftcard",
+      "total": 1,
+      "id": 9
+    },
+    {
+      "text": "Prize#10",
+      "mdIconName": "MdCardGiftcard",
+      "total": 1,
+      "id": 10
+    },
+    {
+      "text": "Prize#11",
+      "mdIconName": "MdCardGiftcard",
+      "total": 1,
+      "id": 11
+    },
+    {
+      "text": "Prize#12",
+      "mdIconName": "MdCardGiftcard",
+      "total": 1,
+      "id": 12
+    },
+    {
+      "text": "Prize#13",
+      "mdIconName": "MdCardGiftcard",
+      "total": 1,
+      "id": 13
+    },
+    {
+      "text": "Prize#14",
+      "mdIconName": "MdCardGiftcard",
+      "total": 1,
+      "id": 14
+    },
+    {
+      "text": "Prize#15",
+      "mdIconName": "MdCardGiftcard",
+      "total": 1,
+      "id": 15
+    },
+    {
+      "text": "Prize#16",
+      "mdIconName": "MdCardGiftcard",
+      "total": 1,
+      "id": 16
+    },
+    {
+      "text": "Prize#17",
+      "mdIconName": "MdCardGiftcard",
+      "total": 5,
+      "id": 17
+    },
+    {
+      "text": "Prize#18",
+      "mdIconName": "MdCardGiftcard",
+      "total": 10,
+      "id": 18
+    },
+    {
+      "text": "Prize#19",
+      "mdIconName": "MdCardGiftcard",
+      "total": 20,
+      "id": 19
+    },
+    {
+      "text": "Prize#20",
+      "mdIconName": "MdCardGiftcard",
+      "total": 69,
+      "id": 20
+    }
+  ],
+  "displayText": false,
+  "iconSize": 44
+}

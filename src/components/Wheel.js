@@ -4,7 +4,14 @@ import styles from './Wheel.module.css';
 import Pie from './Pie';
 import WheelHand from './WheelHand';
 
-const Wheel = ({ prizes, onPressStart, onPressEnd, resultText }) => {
+const Wheel = ({
+  prizes,
+  onPressStart,
+  onPressEnd,
+  resultText,
+  displayText,
+  iconSize
+}) => {
   const degree = 360 / prizes.length;
   const pieDatas = prizes.map((prize, idx) => {
     const { bgColor, textColor } = getColors(idx, prize.text);
@@ -57,7 +64,6 @@ const Wheel = ({ prizes, onPressStart, onPressEnd, resultText }) => {
   }
 
   function onRotateEnd(degree) {
-    // console.log({ degree });
     const gift = findGift(degree);
     onPressEnd(gift);
   }
@@ -71,20 +77,27 @@ const Wheel = ({ prizes, onPressStart, onPressEnd, resultText }) => {
           disabled={pieDatas.length < 2}
         />
         {pieDatas.map(
-          (
-            { text, mdIconName, startDeg, endDeg, bgColor, textColor, total },
-            idx
-          ) => {
+          ({
+            text,
+            mdIconName,
+            startDeg,
+            endDeg,
+            bgColor,
+            textColor,
+            total,
+            id
+          }) => {
             return (
               <Pie
-                key={idx}
-                text={text}
+                key={id}
+                text={displayText ? text : String(id)}
                 total={total}
                 startDeg={startDeg}
                 endDeg={endDeg}
                 bgColor={bgColor}
                 textColor={textColor}
                 mdIconName={mdIconName}
+                iconSize={iconSize}
               />
             );
           }
@@ -98,11 +111,15 @@ Wheel.propTypes = {
   prizes: PropTypes.array.isRequired,
   onPressStart: PropTypes.func.isRequired,
   onPressEnd: PropTypes.func.isRequired,
-  resultText: PropTypes.string
+  resultText: PropTypes.string,
+  displayText: PropTypes.bool,
+  iconSize: PropTypes.number
 };
 
 Wheel.defaultProps = {
-  resultText: ''
+  resultText: '',
+  displayText: true,
+  iconSize: 64
 };
 
 export default Wheel;

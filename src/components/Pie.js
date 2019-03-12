@@ -46,8 +46,17 @@ class Pie extends React.Component {
     this.draw();
   }
   render() {
-    const { mdIconName, textColor, startDeg, endDeg, total, text } = this.props;
-    const Icon = MdIcons[mdIconName];
+    const {
+      mdIconName,
+      textColor,
+      startDeg,
+      endDeg,
+      total,
+      text,
+      iconSize
+    } = this.props;
+
+    const Icon = MdIcons[mdIconName] || MdIcons['MdCardGiftcard'];
 
     return (
       <div
@@ -60,10 +69,12 @@ class Pie extends React.Component {
       >
         <canvas className={styles.canvas} ref={this.canvasRef} />
         <div className={styles.centerBlock}>
-          <Icon size={64} />
+          <Icon size={iconSize} />
           <div className={styles.text}>
-            {text} <span>({total})</span>
+            {text}
+            {/* <span>({total})</span> */}
           </div>
+          <div>({total})</div>
         </div>
         <div className={styles.starBlock}>
           <PieStarIcon
@@ -84,7 +95,8 @@ Pie.defaultProps = {
   textColor: 'black',
   bgColor: 'white',
   total: 0,
-  text: '?'
+  text: '?',
+  iconSize: 64
 };
 
 Pie.propTypes = {
@@ -94,7 +106,8 @@ Pie.propTypes = {
   total: PropTypes.number,
   text: PropTypes.string,
   startDeg: PropTypes.number.isRequired,
-  endDeg: PropTypes.number.isRequired
+  endDeg: PropTypes.number.isRequired,
+  iconSize: PropTypes.number
 };
 
 export default Pie;

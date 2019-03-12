@@ -1,0 +1,36 @@
+{
+  "prizes": [
+    {
+      "text": "Flight",
+      "mdIconName": "MdFlight",
+      "total": 1,
+      "id": 1
+    },
+    {
+      "text": "Child",
+      "mdIconName": "MdChildCare",
+      "total": 4,
+      "id": 2
+    },
+    {
+      "text": "Anything",
+      "mdIconName": "MdStars",
+      "total": 5,
+      "id": 3
+    },
+    {
+      "text": "Wifi",
+      "mdIconName": "MdWifi",
+      "total": 5,
+      "id": 4
+    },
+    {
+      "text": "Wish",
+      "mdIconName": "MdCake",
+      "total": 5,
+      "id": 5
+    }
+  ],
+  "displayText": true,
+  "iconSize": 64
+}
