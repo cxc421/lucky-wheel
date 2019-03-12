@@ -67,6 +67,9 @@ const SetupPage = ({
   }
 
   function removePrize(id) {
+    if (prizes.length < 2) {
+      return alert('At least one prize is required.');
+    }
     setPrizes(prizes.filter(prize => prize.id !== id));
   }
 
@@ -163,7 +166,15 @@ const SetupPage = ({
         <Row>
           <Col style={{ paddingTop: 5 }}>
             <span className={styles.title1}>Total Prizes:</span>
-            <span>{prizes.reduce((acc, prize) => acc + prize.total, 0)}</span>
+            <span>
+              {prizes.reduce((acc, prize) => {
+                let val = parseInt(prize.total);
+                if (isNaN(val)) {
+                  return acc;
+                }
+                return acc + val;
+              }, 0)}
+            </span>
           </Col>
         </Row>
         <Row>
