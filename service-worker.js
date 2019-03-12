@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/lucky-wheel/precache-manifest.dc7a54b48c5a0c3e6b771a572137923f.js"
+  "/lucky-wheel/precache-manifest.98ddd640366591db873c44ba67b07dc9.js"
 );
 
 workbox.clientsClaim();
