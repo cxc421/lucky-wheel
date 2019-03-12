@@ -69,7 +69,10 @@ class Pie extends React.Component {
       >
         <canvas className={styles.canvas} ref={this.canvasRef} />
         <div className={styles.centerBlock}>
-          <Icon size={iconSize} />
+          <Icon
+            size={iconSize}
+            style={{ display: iconSize > 0 ? 'block' : 'none' }}
+          />
           <div className={styles.text}>
             {text}
             {/* <span>({total})</span> */}

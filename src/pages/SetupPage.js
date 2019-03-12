@@ -60,8 +60,8 @@ const SetupPage = ({
     if (isNaN(val)) {
       return setIconSize(44);
     }
-    if (val < 8) {
-      return setIconSize(8);
+    if (val < 0) {
+      return setIconSize(0);
     }
     setIconSize(val);
   }
@@ -154,7 +154,7 @@ const SetupPage = ({
             <span className={styles.title1}>Icon Size:</span>
             <input
               type="number"
-              min="8"
+              min="0"
               max="70"
               step="1"
               value={iconSize}
