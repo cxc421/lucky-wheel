@@ -74,21 +74,21 @@ const SetupPage = ({
   }
 
   function addNewPrize() {
-    let beforePrize = prizes[0];
+    let newId = Math.min(prizes[0].id - 1, 1);
     let idx = 0;
-    for (let i = 1; i < prizes.length; i++) {
-      const prize = prizes[i];
-      if (prize.id === beforePrize.id + 1) {
-        beforePrize = prize;
-        idx = i;
-      } else {
+
+    for (let i = 0; i < prizes.length; i++) {
+      const prizeId = prizes[i].id;
+      if (newId > 0 && newId < prizeId) {
         break;
       }
+      newId = prizeId + 1;
+      idx = i + 1;
     }
+
     setPrizes(
       produce(prizes, draftPrizes => {
-        const newId = beforePrize.id + 1;
-        draftPrizes.splice(idx + 1, 0, {
+        draftPrizes.splice(idx, 0, {
           text: 'Prize#' + newId,
           mdIconName: 'MdCardGiftcard',
           total: 5,
