@@ -16,7 +16,7 @@ const MODE_SETTING = 'mode-setting';
 
 const App = () => {
   const [prizes, setPrizes] = useState([...defaultConfig.prizes]);
-  const [mode, setMode] = useState(MODE_SETTING);
+  const [mode, setMode] = useState(MODE_WHEEL);
   const [displayText, setDisplayText] = useState(defaultConfig.displayText);
   const [iconSize, setIconSize] = useState(defaultConfig.iconSize);
 
