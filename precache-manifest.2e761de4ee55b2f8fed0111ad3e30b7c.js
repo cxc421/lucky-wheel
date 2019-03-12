@@ -8,19 +8,19 @@ self.__precacheManifest = [
     "url": "/lucky-wheel/static/js/runtime~main.f96c901a.js"
   },
   {
-    "revision": "0badbe4b8b1802402200",
-    "url": "/lucky-wheel/static/js/main.5d715ba9.chunk.js"
+    "revision": "e5a9ca0f8ebcfe9d7fd6",
+    "url": "/lucky-wheel/static/js/main.3371cb7f.chunk.js"
   },
   {
     "revision": "24db98ca1e71e03b5579",
     "url": "/lucky-wheel/static/js/2.dbc70492.chunk.js"
   },
   {
-    "revision": "0badbe4b8b1802402200",
+    "revision": "e5a9ca0f8ebcfe9d7fd6",
     "url": "/lucky-wheel/static/css/main.82dc59c5.chunk.css"
   },
   {
-    "revision": "1e8ab575d60d250142cbc57779f6afe7",
+    "revision": "731cc8e65000c26f8477e7e8498feb26",
     "url": "/lucky-wheel/index.html"
   }
 ];
