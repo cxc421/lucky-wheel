@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import * as MdIcons from 'react-icons/md';
 
 import styles from './Pie.module.css';
-import PieStarIcon from './PieStarIcon';
+import StarIcon from './StarIcon/StarIcon';
 
 class Pie extends React.Component {
   canvasRef = React.createRef();
@@ -80,12 +80,7 @@ class Pie extends React.Component {
           <div>({total})</div>
         </div>
         <div className={styles.starBlock}>
-          <PieStarIcon
-            width={21}
-            height={21}
-            offset={3}
-            className={styles.star}
-          />
+          <StarIcon width={21} height={21} offset={3} className={styles.star} />
           <div className={styles.starCircle} />
         </div>
       </div>

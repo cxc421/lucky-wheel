@@ -7,9 +7,9 @@ import { MdSettings } from 'react-icons/md';
 
 import './global.css';
 import styles from './App.module.css';
-import WheelPage from './pages/WheelPage';
-import SetupPage from './pages/SetupPage';
-import defaultConfig from './configs/default_config_5.json';
+import WheelPage from '../WheelPage/WheelPage';
+import SetupPage from '../SetupPage/SetupPage';
+import defaultConfig from '../../configs/default_config_5.json';
 
 const MODE_WHEEL = 'mode-wheel';
 const MODE_SETTING = 'mode-setting';

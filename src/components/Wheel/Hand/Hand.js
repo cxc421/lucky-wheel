@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import handSvg from '../assets/hand.svg';
-import styles from './WheelHand.module.css';
+import handSvg from '../../../assets/hand.svg';
+import styles from './Hand.module.css';
 
 const WheelHand = ({ onRotateStart, onRotateEnd, disabled }) => {
   const [buttonStyle, setButtonStyle] = useState({});

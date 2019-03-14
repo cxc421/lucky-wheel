@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import produce from 'immer';
 
 import styles from './WheelPage.module.css';
-import Wheel from '../components/Wheel';
-import ResultBanner from '../components/ResultBanner';
+import Wheel from '../../components/Wheel/Wheel';
+import ResultBanner from '../../components/ResultBanner/ResultBanner';
 
 class WheelPage extends Component {
   state = {

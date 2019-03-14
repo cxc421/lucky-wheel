@@ -5,8 +5,8 @@ import { FaPlus } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 
 import styles from './SetupPage.module.css';
-import config_5 from '../configs/default_config_5.json';
-import config_20 from '../configs/default_config_20.json';
+import config_5 from '../../configs/default_config_5.json';
+import config_20 from '../../configs/default_config_20.json';
 
 const SetupPage = ({
   prizes,

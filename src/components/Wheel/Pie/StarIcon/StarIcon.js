@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const PieStarIcon = ({ width, height, offset, className }) => {
+const StarIcon = ({ width, height, offset, className }) => {
   const w = width;
   const h = height;
   const o = offset;
@@ -29,17 +29,17 @@ const PieStarIcon = ({ width, height, offset, className }) => {
   );
 };
 
-PieStarIcon.defaultProps = {
+StarIcon.defaultProps = {
   width: 24,
   height: 24,
   offset: 4
 };
 
-PieStarIcon.propTypes = {
+StarIcon.propTypes = {
   width: PropTypes.number,
   height: PropTypes.number,
   offset: PropTypes.number,
   className: PropTypes.string
 };
 
-export default PieStarIcon;
+export default StarIcon;

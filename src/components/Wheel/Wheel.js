@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Wheel.module.css';
-import Pie from './Pie';
-import WheelHand from './WheelHand';
+import Pie from './Pie/Pie';
+import Hand from './Hand/Hand';
 
 const Wheel = ({
   prizes,
@@ -71,7 +71,7 @@ const Wheel = ({
   return (
     <div className={styles.circleOutside}>
       <div className={styles.circleInside}>
-        <WheelHand
+        <Hand
           onRotateStart={onPressStart}
           onRotateEnd={onRotateEnd}
           disabled={pieDatas.length < 2}
