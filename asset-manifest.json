@@ -1,14 +1,14 @@
 {
-  "main.css": "/lucky-wheel/static/css/main.82dc59c5.chunk.css",
-  "main.js": "/lucky-wheel/static/js/main.fe1c8395.chunk.js",
-  "main.js.map": "/lucky-wheel/static/js/main.fe1c8395.chunk.js.map",
+  "main.css": "/lucky-wheel/static/css/main.4263e8b8.chunk.css",
+  "main.js": "/lucky-wheel/static/js/main.2fa208ea.chunk.js",
+  "main.js.map": "/lucky-wheel/static/js/main.2fa208ea.chunk.js.map",
   "runtime~main.js": "/lucky-wheel/static/js/runtime~main.f96c901a.js",
   "runtime~main.js.map": "/lucky-wheel/static/js/runtime~main.f96c901a.js.map",
   "static/js/2.dbc70492.chunk.js": "/lucky-wheel/static/js/2.dbc70492.chunk.js",
   "static/js/2.dbc70492.chunk.js.map": "/lucky-wheel/static/js/2.dbc70492.chunk.js.map",
   "index.html": "/lucky-wheel/index.html",
-  "precache-manifest.98ddd640366591db873c44ba67b07dc9.js": "/lucky-wheel/precache-manifest.98ddd640366591db873c44ba67b07dc9.js",
+  "precache-manifest.b16bbe5a201d92023efd75c12d510d3a.js": "/lucky-wheel/precache-manifest.b16bbe5a201d92023efd75c12d510d3a.js",
   "service-worker.js": "/lucky-wheel/service-worker.js",
-  "static/css/main.82dc59c5.chunk.css.map": "/lucky-wheel/static/css/main.82dc59c5.chunk.css.map",
+  "static/css/main.4263e8b8.chunk.css.map": "/lucky-wheel/static/css/main.4263e8b8.chunk.css.map",
   "static/media/hand.svg": "/lucky-wheel/static/media/hand.838f2ced.svg"
 }
