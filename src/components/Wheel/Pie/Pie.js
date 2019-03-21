@@ -71,7 +71,7 @@ class Pie extends React.Component {
         <div className={styles.centerBlock}>
           <Icon
             size={iconSize}
-            style={{ display: iconSize > 0 ? 'block' : 'none' }}
+            style={{ display: iconSize > 0 ? 'inline' : 'none' }}
           />
           <div className={styles.text}>
             {text}
